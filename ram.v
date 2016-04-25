@@ -27,3 +27,17 @@ begin
 end
 endmodule
 
+module top(input clk, b, output [7:0] display, output [3:0] anodos);
+    always @(posedge b, negedge b) begin
+        if(b) c_enable<=1;
+        else c_enable<=0;
+    end
+
+    always @(posedge clk) begin
+        if(!c_enable) begin // 
+            cta<=0;
+        else
+            cta<=cta+1;
+            if (cta
+    end
+
